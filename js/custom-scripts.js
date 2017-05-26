@@ -12,9 +12,24 @@ $(window).ready(function () {
 
     });
 
+    $('input[type="file"]').change(function() {
+
+        var name = $(this).val().split('\\');
+        $(this).parent().siblings('.text').html(name[name.length - 1]);
+
+    });
+
+    $('a[href^="#"]').click(function(){
+
+        var target = $(this).attr('href');
+        $('html, body').animate({scrollTop: $(target).offset().top - 50}, 800);
+
+        return false;
+    });
+
     $('.custom-select .current-value').click(function() {
 
-        if($(this).hasClass('active')) {
+        if($(this).parent().hasClass('active')) {
             $(this).parent().removeClass('active');
         } else {
             $('.custom-select').removeClass('active');
@@ -86,10 +101,6 @@ $(window).ready(function () {
         var curNumber = $(this).parent().attr('id').split('#')[1];
         $(this).parent().detach();
         $('.select-options ul li').eq(curNumber).removeClass('active');
-    });
-
-    $('.fill-in-questionnaire').click(function() {
-        $('html, body').animate({scrollTop: $('.questionnaire').offset().top - 50}, 600);
     });
 
     $('.callback').click(function() {
