@@ -619,7 +619,6 @@ header[role='banner'] .header-buttons .button {
   -ms-transform: skew(10deg);
   -o-transform: skew(10deg);
   transform: skew(10deg);
-  opacity: .7;
 }
 .top-block nav a:before {
   content: '';
@@ -629,6 +628,12 @@ header[role='banner'] .header-buttons .button {
   background: url(../source/images/sprite-1.png) no-repeat 0 0;
   background-size: cover;
   margin: 20px auto 10px;
+  -webkit-transition: 0.4s;
+  -moz-transition: 0.4s;
+  -ms-transition: 0.4s;
+  -o-transition: 0.4s;
+  transition: 0.4s;
+  position: relative;
 }
 .top-block nav a:nth-of-type(2):before {
   background-position: -50px 0;
@@ -640,8 +645,10 @@ header[role='banner'] .header-buttons .button {
   background-position: -150px 0;
 }
 .top-block nav a:hover {
-  opacity: 1;
   text-decoration: none;
+}
+.top-block nav a:hover:before {
+  margin: 25px auto 5px;
 }
 @media (max-width: 768px) {
   .top-block nav a {

@@ -710,7 +710,6 @@ header[role='banner'] {
       font-size: 16px;
       color: #fff;
       .turned(10deg);
-      opacity: .7;
 
       &:before {
         content: '';
@@ -720,6 +719,8 @@ header[role='banner'] {
         background: url(../source/images/sprite-1.png) no-repeat 0 0;
         background-size: cover;
         margin: 20px auto 10px;
+        .smooth(.4s);
+        position: relative;
       }
 
       &:nth-of-type(2):before {
@@ -735,8 +736,12 @@ header[role='banner'] {
       }
 
       &:hover {
-      opacity: 1;
       text-decoration: none;
+
+      &:before {
+        margin: 25px auto 5px;
+      }
+
     }
 
       @media(max-width: 768px) {
