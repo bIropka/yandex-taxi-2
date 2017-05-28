@@ -477,7 +477,7 @@ header[role='banner'] .logo span {
   header[role='banner'] .logo span {
     font-size: 16px;
     display: block;
-    max-width: 200px;
+    max-width: 230px;
   }
 }
 @media (max-width: 768px) {
@@ -662,7 +662,7 @@ header[role='banner'] .header-buttons .button {
 }
 .top-block ul {
   background: rgba(0, 0, 0, 0.87);
-  padding: 10px 20px;
+  padding: 10px 20px 10px 35px;
 }
 .top-block ul li {
   display: block;
@@ -2261,15 +2261,10 @@ footer[role='contentinfo'] .select-city ul {
 }
 .window .close-window {
   display: block;
-  width: 40px;
-  height: 40px;
+  width: 25px;
+  height: 25px;
   border-radius: 50%;
-  background: #fff;
-  font-family: 'PF AgoraSansPro Medium', sans-serif;
-  color: #000;
-  font-size: 24px;
-  line-height: 40px;
-  text-align: center;
+  background: #fff url(../source/images/close-black.png) no-repeat center;
   position: absolute;
   margin: auto;
   top: 10px;
@@ -2282,8 +2277,7 @@ footer[role='contentinfo'] .select-city ul {
   transform: skew(10deg);
 }
 .window .close-window:hover {
-  background: #000;
-  color: #fff;
+  background: #000 url(../source/images/close-white.png) no-repeat center;
   -webkit-transition: 0.4s;
   -moz-transition: 0.4s;
   -ms-transition: 0.4s;
